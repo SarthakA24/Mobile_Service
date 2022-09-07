@@ -24,7 +24,8 @@ public class MobileStore extends Mobile {
                 double cost = Double.parseDouble(data[1]);
                 double screenSize = Double.parseDouble(data[2]);
                 int batteryLife = Integer.parseInt(data[3]);
-                Mobile tempMobile = new Mobile(brandName, cost, screenSize, batteryLife);
+                int megaPixels = Integer.parseInt(data[4]);
+                Mobile tempMobile = new Mobile(brandName, cost, screenSize, batteryLife, megaPixels);
                 mobileList.add(tempMobile);
             }
         } catch (IOException exception) {
