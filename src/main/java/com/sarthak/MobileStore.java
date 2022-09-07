@@ -5,5 +5,5 @@
  */
 package com.sarthak;
 
-public class MobileStore {
+public class MobileStore extends Mobile {
 }
