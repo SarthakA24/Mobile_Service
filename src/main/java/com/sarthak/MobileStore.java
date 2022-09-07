@@ -25,12 +25,12 @@ public class MobileStore extends Mobile {
             String line = bufferedReader.readLine();
             while ((line = bufferedReader.readLine()) != null) {
                 String[] data = line.split(",");
-                String brandName = data[0].trim();
-                double cost = Double.parseDouble(data[1]);
-                double screenSize = Double.parseDouble(data[2]);
-                int batteryLife = Integer.parseInt(data[3]);
-                int megaPixels = Integer.parseInt(data[4]);
-                Mobile tempMobile = new Mobile(brandName, cost, screenSize, batteryLife, megaPixels);
+                Mobile tempMobile = new Mobile();
+                tempMobile.setBrandName(data[0].trim());
+                tempMobile.setCost(Double.parseDouble(data[1]));
+                tempMobile.setScreenSize(Double.parseDouble(data[2]));
+                tempMobile.setBatteryLife(Integer.parseInt(data[3]));
+                tempMobile.setMegaPixels(Integer.parseInt(data[4]));
                 mobileList.add(tempMobile);
             }
         } catch (IOException exception) {
