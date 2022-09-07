@@ -13,7 +13,12 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class MobileStore extends Mobile {
-    private List<Mobile> mobileList;
+    private final List<Mobile> mobileList;
+
+    public MobileStore() {
+        this.mobileList = new ArrayList<>();
+    }
+
     public List<Mobile> readMobileData(String fileName) {
         // Read the data from the file and store it in the List mobileList
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
