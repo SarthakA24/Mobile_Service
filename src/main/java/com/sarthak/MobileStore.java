@@ -44,4 +44,10 @@ public class MobileStore extends Mobile {
         }
         return phoneByBrand;
     }
+
+    public List<Mobile> findPhoneCostMoreThan$500() {
+        ListIterator<Mobile> listIterator = mobileList.listIterator();
+        List<Mobile> phoneCostMoreThan$500 = new ArrayList<>();
+        return phoneCostMoreThan$500;
+    }
 }
