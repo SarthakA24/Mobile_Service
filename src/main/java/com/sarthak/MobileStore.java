@@ -26,6 +26,21 @@ public class MobileStore extends Mobile {
         } catch (IOException exception) {
             System.err.println(exception.getMessage());
         }
+        // Read the data from the file and store it in the List mobileList
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
+            String line = bufferedReader.readLine();
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] data = line.split(",");
+                String brandName = data[0].trim();
+                double cost = Double.parseDouble(data[1]);
+                double screenSize = Double.parseDouble(data[2]);
+                int batteryLife = Integer.parseInt(data[3]);
+                Mobile tempMobile = new Mobile(brandName, cost, screenSize, batteryLife);
+                mobileList.add(tempMobile);
+            }
+        } catch (IOException exception) {
+            System.err.println(exception.getMessage());
+        }
         return mobileList;
     }
 }
