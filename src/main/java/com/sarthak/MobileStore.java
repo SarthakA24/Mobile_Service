@@ -8,7 +8,9 @@ package com.sarthak;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class MobileStore extends Mobile {
     private List<Mobile> mobileList;
@@ -29,5 +31,11 @@ public class MobileStore extends Mobile {
             System.err.println(exception.getMessage());
         }
         return mobileList;
+    }
+
+    public List<Mobile> findPhoneByBrand(String brandName) {
+        ListIterator<Mobile> listIterator = mobileList.listIterator();
+        List<Mobile> phoneByBrand = new ArrayList<>();
+        return phoneByBrand;
     }
 }
