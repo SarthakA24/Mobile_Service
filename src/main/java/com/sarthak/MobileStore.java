@@ -57,4 +57,10 @@ public class MobileStore extends Mobile {
         }
         return phoneCostMoreThan$500;
     }
+
+    public List<Mobile> findPhonePixelMoreThan12MP() {
+        ListIterator<Mobile> listIterator = mobileList.listIterator();
+        List<Mobile> phonesWithPixels = new ArrayList<>();
+        return phonesWithPixels;
+    }
 }
