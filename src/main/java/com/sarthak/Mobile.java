@@ -52,4 +52,14 @@ public class Mobile {
 
     public Mobile() {
     }
+
+    @Override
+    public String toString() {
+        return "Mobile{" +
+                "brandName='" + brandName + '\'' +
+                ", cost=" + cost +
+                ", screenSize=" + screenSize +
+                ", batteryLife=" + batteryLife +
+                '}';
+    }
 }
