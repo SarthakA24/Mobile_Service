@@ -8,12 +8,11 @@ package com.sarthak;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class MobileStore extends Mobile {
+    private List<Mobile> mobileList;
     public List<Mobile> readMobileData(String fileName) {
-        List<Mobile> mobileList = new ArrayList<>();
         // Read the data from the file and store it in the List mobileList
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             String line = bufferedReader.readLine();
