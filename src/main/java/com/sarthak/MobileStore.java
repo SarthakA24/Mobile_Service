@@ -16,11 +16,15 @@ public class MobileStore extends Mobile {
         List<Mobile> mobileList = new ArrayList<>();
         // Create a variable to count the number of line in the file
         int numberOfLines = 0;
-        // Create an instance of BufferedReader and FileReader in a try-with-resource block
+        // Create an instance of BufferedReader and FileReader in a try-with-resource block to count the number of
+        // line in the file
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            bufferedReader.readLine();
+            while (bufferedReader.readLine() != null) {
+                numberOfLines++;
+            }
+        } catch (IOException exception) {
+            System.err.println(exception.getMessage());
         }
         return mobileList;
     }
