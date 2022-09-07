@@ -5,6 +5,8 @@
  */
 package com.sarthak;
 
+import java.util.Objects;
+
 public class Mobile {
     private String brandName;
     private double cost;
@@ -61,5 +63,18 @@ public class Mobile {
                 ", screenSize=" + screenSize +
                 ", batteryLife=" + batteryLife +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Mobile)) return false;
+        Mobile mobile = (Mobile) o;
+        return Double.compare(mobile.getCost(), getCost()) == 0 && Double.compare(mobile.getScreenSize(), getScreenSize()) == 0 && getBatteryLife() == mobile.getBatteryLife() && getBrandName().equals(mobile.getBrandName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBrandName(), getCost(), getScreenSize(), getBatteryLife());
     }
 }
