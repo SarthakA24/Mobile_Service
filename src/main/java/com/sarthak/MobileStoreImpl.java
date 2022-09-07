@@ -6,4 +6,7 @@
 package com.sarthak;
 
 public class MobileStoreImpl {
+    public static void main(String[] args) {
+
+    }
 }
