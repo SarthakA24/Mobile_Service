@@ -61,6 +61,12 @@ public class MobileStore extends Mobile {
     public List<Mobile> findPhonePixelMoreThan12MP() {
         ListIterator<Mobile> listIterator = mobileList.listIterator();
         List<Mobile> phonesWithPixels = new ArrayList<>();
+        while (listIterator.hasNext()) {
+            Mobile currentMobile = listIterator.next();
+            if (currentMobile.getMegaPixels() >= 12) {
+                phonesWithPixels.add(currentMobile);
+            }
+        }
         return phonesWithPixels;
     }
 }
