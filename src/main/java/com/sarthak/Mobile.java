@@ -42,4 +42,14 @@ public class Mobile {
     public void setBatteryLife(int batteryLife) {
         this.batteryLife = batteryLife;
     }
+
+    public Mobile(String brandName, double cost, double screenSize, int batteryLife) {
+        this.brandName = brandName;
+        this.cost = cost;
+        this.screenSize = screenSize;
+        this.batteryLife = batteryLife;
+    }
+
+    public Mobile() {
+    }
 }
