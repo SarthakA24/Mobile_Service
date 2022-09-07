@@ -1,8 +1,8 @@
-brandName,cost  ,screenSize,batteryLife,megaPixels
-iphone   ,699.00,6.3       ,4000       ,48
-oneplus  ,599.0 ,6.9       ,4500       ,64
-realme   ,199.0 ,6.4       ,5000       ,48
-redmi    ,189.0 ,6.5       ,5000       ,42
-xiaomi   ,349.0 ,6.3       ,6000       ,8
-motorola ,399.0 ,6.6       ,7000       ,12
-samsung  ,549.0 ,6.1       ,7000       ,10
+brandName,cost,screenSize,batteryLife,megaPixels
+iphone,699.00,6.3,4000,48
+oneplus,599.0,6.9,4500,64
+realme,199.0,6.4,5000,48
+redmi,189.0,6.5,5000,42
+xiaomi,349.0,6.3,6000,8
+motorola,399.0,6.6,7000,12
+samsung,549.0,6.1,7000,10
