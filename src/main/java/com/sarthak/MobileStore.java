@@ -36,6 +36,12 @@ public class MobileStore extends Mobile {
     public List<Mobile> findPhoneByBrand(String brandName) {
         ListIterator<Mobile> listIterator = mobileList.listIterator();
         List<Mobile> phoneByBrand = new ArrayList<>();
+        while (listIterator.hasNext()) {
+            Mobile currentMobile = listIterator.next();
+            if (currentMobile.getBrandName().equals(brandName)) {
+                phoneByBrand.add(currentMobile);
+            }
+        }
         return phoneByBrand;
     }
 }
