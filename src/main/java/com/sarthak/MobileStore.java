@@ -18,6 +18,7 @@ public class MobileStore {
 
     public void addMobileToList() {
         Scanner scanner = new Scanner(System.in);
+        readMobileData();
         String addMore;
         do {
             System.out.println("Enter the Brand Name - ");
@@ -35,6 +36,7 @@ public class MobileStore {
             System.out.println("Do you want to add more mobiles? (y/n) - ");
             addMore = scanner.nextLine();
         } while (addMore.equalsIgnoreCase("y"));
+        writeMobileData();
     }
 
     public void readMobileData() {
