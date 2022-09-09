@@ -88,4 +88,8 @@ public class MobileStore extends Mobile {
             mobile.displayDetails();
         }
     }
+
+    public void sortBasedOnCost() {
+        mobileList.sort(new MobileComparator());
+    }
 }
