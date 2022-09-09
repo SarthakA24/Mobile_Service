@@ -94,6 +94,16 @@ public class MobileStore {
         }
     }
 
+    public void displayMobile(List<Mobile> mobileList, String brandName) {
+        System.out.println("----------------------------");
+        System.out.println("All Mobiles Available in the Store with the Brand Name " + brandName + " - ");
+        Iterator<Mobile> mobileIterator = mobileList.iterator();
+        while (mobileIterator.hasNext()) {
+            Mobile mobile = mobileIterator.next();
+            mobile.displayDetails();
+        }
+    }
+
     public void sortBasedOnCost() {
         mobileList.sort(new MobileComparatorBasedOnCost());
     }
