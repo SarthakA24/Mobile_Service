@@ -5,10 +5,9 @@
  */
 package com.sarthak;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -37,6 +36,20 @@ public class MobileStore extends Mobile {
             System.err.println(exception.getMessage());
         }
         return mobileList;
+    }
+
+    public void writeMobileData (String fileName) {
+        // Store data from the mobileList in the file
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName,true))){
+            Iterator<Mobile> mobileIterator = mobileList.iterator();
+            while (mobileIterator.hasNext()) {
+                Mobile mobile = new Mobile();
+                String data = "\n" + mobile.getBrandName() + ", " + mobile.getCost() + ", " + mobile.getScreenSize()
+                        + ", " + mobile.getBatteryLife() + ", " + mobile.getMegaPixels();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public List<Mobile> findPhoneByBrand(String brandName) {
