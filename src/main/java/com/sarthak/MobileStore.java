@@ -57,7 +57,7 @@ public class MobileStore extends Mobile {
         }
     }
 
-    public void writeMobileData () {
+    public void writeMobileData() {
         // Store data from the mobileList in the file
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))){
             Iterator<Mobile> mobileIterator = mobileList.iterator();
@@ -65,6 +65,7 @@ public class MobileStore extends Mobile {
                 Mobile mobile = new Mobile();
                 String data = "\n" + mobile.getBrandName() + ", " + mobile.getCost() + ", " + mobile.getScreenSize()
                         + ", " + mobile.getBatteryLife() + ", " + mobile.getMegaPixels();
+                bufferedWriter.write(data);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
