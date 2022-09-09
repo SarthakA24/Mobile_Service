@@ -10,9 +10,8 @@ import java.util.List;
 public class MobileStoreImpl {
     public static void main(String[] args) {
         MobileStore mobileStore = new MobileStore();
-        String fileName = "src/main/resources/mobile.csv";
-        List<Mobile> mobileList = mobileStore.readMobileData(fileName);
-        System.out.println("mobileList = " + mobileList);
+        mobileStore.readMobileData();
+        System.out.println("mobileList = " + mobileStore);
         List<Mobile> oneplus = mobileStore.findPhoneByBrand("oneplus");
         System.out.println("oneplus = " + oneplus);
         List<Mobile> phoneCostMoreThan$500 = mobileStore.findPhoneCostMoreThan$500();
