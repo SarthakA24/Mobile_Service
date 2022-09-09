@@ -5,5 +5,11 @@
  */
 package com.sarthak;
 
-public class MobileComparatorAlphabetically {
+import java.util.Comparator;
+
+public class MobileComparatorAlphabetically implements Comparator<Mobile> {
+    @Override
+    public int compare(Mobile o1, Mobile o2) {
+        return String.CASE_INSENSITIVE_ORDER.compare(o1.getBrandName(),o2.getBrandName());
+    }
 }
