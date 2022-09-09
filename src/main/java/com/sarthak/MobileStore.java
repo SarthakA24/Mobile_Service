@@ -8,7 +8,7 @@ package com.sarthak;
 import java.io.*;
 import java.util.*;
 
-public class MobileStore extends Mobile {
+public class MobileStore {
     private final List<Mobile> mobileList;
     private final String fileName = "src/main/resources/mobile.csv";
 
