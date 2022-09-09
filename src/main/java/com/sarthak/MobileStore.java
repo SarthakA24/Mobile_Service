@@ -82,4 +82,12 @@ public class MobileStore extends Mobile {
         }
         return phoneByBrand;
     }
+
+    public void displayMobile() {
+        Iterator<Mobile> mobileIterator = mobileList.iterator();
+        while (mobileIterator.hasNext()) {
+            Mobile mobile = mobileIterator.next();
+            mobile.displayDetails();
+        }
+    }
 }
