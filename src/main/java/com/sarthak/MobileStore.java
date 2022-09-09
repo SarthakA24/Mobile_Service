@@ -86,6 +86,7 @@ public class MobileStore {
     }
 
     public void displayMobile() {
+        readMobileData();
         System.out.println("----------------------------");
         System.out.println("All Mobiles Available in the Store");
         for (Mobile mobile : mobileList) {
