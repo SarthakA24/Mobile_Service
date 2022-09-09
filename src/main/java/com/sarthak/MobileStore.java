@@ -59,7 +59,7 @@ public class MobileStore extends Mobile {
 
     public void writeMobileData () {
         // Store data from the mobileList in the file
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName,true))){
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))){
             Iterator<Mobile> mobileIterator = mobileList.iterator();
             while (mobileIterator.hasNext()) {
                 Mobile mobile = new Mobile();
