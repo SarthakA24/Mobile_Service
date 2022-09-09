@@ -36,7 +36,6 @@ public class MobileStore {
             System.out.println("Do you want to add more mobiles? (y/n) - ");
             addMore = scanner.nextLine();
         } while (addMore.equalsIgnoreCase("y"));
-        writeMobileData();
     }
 
     public void readMobileData() {
