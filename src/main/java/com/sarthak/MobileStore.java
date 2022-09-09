@@ -84,30 +84,6 @@ public class MobileStore extends Mobile {
         return phoneByBrand;
     }
 
-    public List<Mobile> findPhoneCostMoreThan$500() {
-        ListIterator<Mobile> listIterator = mobileList.listIterator();
-        List<Mobile> phoneCostMoreThan$500 = new ArrayList<>();
-        while (listIterator.hasNext()) {
-            Mobile currentMobile = listIterator.next();
-            if (currentMobile.getCost() > 500.0) {
-                phoneCostMoreThan$500.add(currentMobile);
-            }
-        }
-        return phoneCostMoreThan$500;
-    }
-
-    public List<Mobile> findPhonePixelMoreThan12MP() {
-        ListIterator<Mobile> listIterator = mobileList.listIterator();
-        List<Mobile> phonesWithPixels = new ArrayList<>();
-        while (listIterator.hasNext()) {
-            Mobile currentMobile = listIterator.next();
-            if (currentMobile.getMegaPixels() >= 12) {
-                phonesWithPixels.add(currentMobile);
-            }
-        }
-        return phonesWithPixels;
-    }
-
     @Override
     public String toString() {
         return "MobileStore{" +
