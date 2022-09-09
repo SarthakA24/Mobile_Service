@@ -94,7 +94,7 @@ public class Mobile {
         System.out.println("Mobile Brand Name - " + this.brandName);
         System.out.println("Mobile's Cost - Rs. " + this.cost);
         System.out.println("Mobile's Screen Size - " + this.screenSize + " inches");
-        System.out.println("Mobile's Battery Life - " + this.brandName + " mAh");
+        System.out.println("Mobile's Battery Life - " + this.batteryLife + " mAh");
         System.out.println("Camera Megapixels - " + this.megaPixels);
         System.out.println("----------------------------");
     }
