@@ -94,6 +94,6 @@ public class MobileStore extends Mobile {
     }
 
     public void sortAlphabetically() {
-
+        mobileList.sort(new MobileComparatorAlphabetically());
     }
 }
