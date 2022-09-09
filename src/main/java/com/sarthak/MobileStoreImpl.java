@@ -10,13 +10,6 @@ import java.util.List;
 public class MobileStoreImpl {
     public static void main(String[] args) {
         MobileStore mobileStore = new MobileStore();
-        mobileStore.readMobileData();
-        System.out.println("mobileList = " + mobileStore);
-        List<Mobile> oneplus = mobileStore.findPhoneByBrand("oneplus");
-        System.out.println("oneplus = " + oneplus);
-        List<Mobile> phoneCostMoreThan$500 = mobileStore.findPhoneCostMoreThan$500();
-        System.out.println("phoneCostMoreThan$500 = " + phoneCostMoreThan$500);
-        List<Mobile> phonePixelMoreThan12MP = mobileStore.findPhonePixelMoreThan12MP();
-        System.out.println("phonePixelMoreThan12MP = " + phonePixelMoreThan12MP);
+
     }
 }
