@@ -35,7 +35,6 @@ public class MobileStore extends Mobile {
             System.out.println("Do you want to add more mobiles? (y/n) - ");
             addMore = scanner.nextLine();
         } while (addMore.equalsIgnoreCase("y"));
-        writeMobileData();
     }
 
     public void readMobileData() {
@@ -82,12 +81,5 @@ public class MobileStore extends Mobile {
             }
         }
         return phoneByBrand;
-    }
-
-    @Override
-    public String toString() {
-        return "MobileStore{" +
-                "mobileList=" + mobileList +
-                '}';
     }
 }
