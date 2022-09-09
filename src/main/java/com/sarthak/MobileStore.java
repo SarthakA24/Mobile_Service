@@ -84,9 +84,7 @@ public class MobileStore extends Mobile {
     }
 
     public void displayMobile() {
-        Iterator<Mobile> mobileIterator = mobileList.iterator();
-        while (mobileIterator.hasNext()) {
-            Mobile mobile = mobileIterator.next();
+        for (Mobile mobile : mobileList) {
             mobile.displayDetails();
         }
     }
