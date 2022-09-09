@@ -6,19 +6,39 @@
 package com.sarthak;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class MobileStore extends Mobile {
     private final List<Mobile> mobileList;
+    private final String fileName = "src/main/resources/mobile.csv";
 
     public MobileStore() {
         this.mobileList = new ArrayList<>();
     }
 
-    public List<Mobile> readMobileData(String fileName) {
+    public void addMobileToList() {
+        Scanner scanner = new Scanner(System.in);
+        String addMore;
+        do {
+            System.out.println("Enter the Brand Name - ");
+            String brandName = scanner.nextLine();
+            System.out.println("Enter the cost for the mobile - ");
+            double cost = Double.parseDouble(scanner.nextLine());
+            System.out.println("Enter the Screen Size - ");
+            double screenSize = Double.parseDouble(scanner.nextLine());
+            System.out.println("Enter the battery life of the mobile - ");
+            int batteryLife = Integer.parseInt(scanner.nextLine());
+            System.out.println("Enter the Megapixels for the Camera - ");
+            int megaPixels = Integer.parseInt(scanner.nextLine());
+            Mobile mobile = new Mobile(brandName,cost,screenSize,batteryLife,megaPixels);
+            mobileList.add(mobile);
+            System.out.println("Do you want to add more mobiles? (y/n) - ");
+            addMore = scanner.nextLine();
+        } while (addMore.equalsIgnoreCase("y"));
+        writeMobileData();
+    }
+
+    public void readMobileData() {
         // Read the data from the file and store it in the List mobileList
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             String line = bufferedReader.readLine();
@@ -35,10 +55,9 @@ public class MobileStore extends Mobile {
         } catch (IOException exception) {
             System.err.println(exception.getMessage());
         }
-        return mobileList;
     }
 
-    public void writeMobileData (String fileName) {
+    public void writeMobileData () {
         // Store data from the mobileList in the file
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName,true))){
             Iterator<Mobile> mobileIterator = mobileList.iterator();
@@ -86,5 +105,12 @@ public class MobileStore extends Mobile {
             }
         }
         return phonesWithPixels;
+    }
+
+    @Override
+    public String toString() {
+        return "MobileStore{" +
+                "mobileList=" + mobileList +
+                '}';
     }
 }
