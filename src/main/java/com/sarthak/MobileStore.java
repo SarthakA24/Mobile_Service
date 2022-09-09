@@ -90,6 +90,10 @@ public class MobileStore extends Mobile {
     }
 
     public void sortBasedOnCost() {
-        mobileList.sort(new MobileComparator());
+        mobileList.sort(new MobileComparatorBasedOnCost());
+    }
+
+    public void sortAlphabetically() {
+
     }
 }
