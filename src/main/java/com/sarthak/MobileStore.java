@@ -14,12 +14,11 @@ public class MobileStore {
 
     public MobileStore() {
         this.mobileList = new ArrayList<>();
+        readMobileData();
     }
 
     public void addMobileToList() {
-        readMobileData();
         Scanner scanner = new Scanner(System.in);
-        readMobileData();
         String addMore;
         do {
             System.out.println("Enter the Brand Name - ");
