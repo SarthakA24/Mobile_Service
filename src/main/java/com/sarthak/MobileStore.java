@@ -61,9 +61,7 @@ public class MobileStore {
     public void writeMobileData() {
         // Store data from the mobileList in the file
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName,false))){
-            Iterator<Mobile> mobileIterator = mobileList.iterator();
-            while (mobileIterator.hasNext()) {
-                Mobile mobile = mobileIterator.next();
+            for (Mobile mobile : mobileList) {
                 String data = "\n" + mobile.getBrandName() + "," + mobile.getCost() + "," + mobile.getScreenSize()
                         + "," + mobile.getBatteryLife() + "," + mobile.getMegaPixels();
                 bufferedWriter.write(data);
