@@ -14,7 +14,26 @@ public class MobileStore {
 
     public MobileStore() {
         this.mobileList = new ArrayList<>();
-        readMobileData();
+        initialiseMobileStore();
+    }
+
+    public void initialiseMobileStore() {
+        System.out.println("Initialising the Mobile Store...");
+        try {
+            Thread.sleep(2000);
+            System.out.println("Store Initialised!!");
+            Thread.sleep(1000);
+            System.out.println("Reading data from the Mobiles List");
+            readMobileData();
+            Thread.sleep(2000);
+            System.out.println("Data Read Successfully!!");
+            Thread.sleep(1000);
+            System.out.println("Initialising the Menu....");
+            System.out.println("----------------------------");
+            Thread.sleep(2000);
+        } catch (InterruptedException exception) {
+            System.err.println(exception.getMessage());
+        }
     }
 
     public void addMobileToList() {
