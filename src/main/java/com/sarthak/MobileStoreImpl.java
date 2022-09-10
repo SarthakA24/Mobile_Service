@@ -18,7 +18,6 @@ public class MobileStoreImpl {
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
-                    mobileStore.readMobileData();
                     mobileStore.sortAlphabetically();
                     mobileStore.displayMobile();
                     break;
@@ -33,7 +32,6 @@ public class MobileStoreImpl {
                     mobileStore.displayMobile(phoneByBrand,brandName);
                     break;
                 case 4:
-                    mobileStore.readMobileData();
                     mobileStore.sortBasedOnCost();
                     mobileStore.displayMobile();
                     break;
