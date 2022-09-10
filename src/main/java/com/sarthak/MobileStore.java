@@ -17,6 +17,7 @@ public class MobileStore {
     }
 
     public void addMobileToList() {
+        readMobileData();
         Scanner scanner = new Scanner(System.in);
         readMobileData();
         String addMore;
@@ -36,6 +37,7 @@ public class MobileStore {
             System.out.println("Do you want to add more mobiles? (y/n) - ");
             addMore = scanner.nextLine();
         } while (addMore.equalsIgnoreCase("y"));
+        writeMobileData();
     }
 
     public void readMobileData() {
@@ -59,12 +61,12 @@ public class MobileStore {
 
     public void writeMobileData() {
         // Store data from the mobileList in the file
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))){
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName,false))){
             Iterator<Mobile> mobileIterator = mobileList.iterator();
             while (mobileIterator.hasNext()) {
-                Mobile mobile = new Mobile();
-                String data = "\n" + mobile.getBrandName() + ", " + mobile.getCost() + ", " + mobile.getScreenSize()
-                        + ", " + mobile.getBatteryLife() + ", " + mobile.getMegaPixels();
+                Mobile mobile = mobileIterator.next();
+                String data = "\n" + mobile.getBrandName() + "," + mobile.getCost() + "," + mobile.getScreenSize()
+                        + "," + mobile.getBatteryLife() + "," + mobile.getMegaPixels();
                 bufferedWriter.write(data);
             }
         } catch (IOException e) {
