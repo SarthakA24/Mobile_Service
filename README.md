@@ -1,42 +1,22 @@
 ## Mobile Store
 
 ---
-### Task Details
 
-Imagine that you wish to purchase a mobile phone with specifications that include the brand name, cost, screen size, battery life, storage space and camera pixels. You have a list of the latest models available. Create a program that performs the following activities:
-1. Find phones of a particular brand.
-2. Find phones that cost $500 and above.
-3. Find phones that have a camera specification of 12 MP or more.
-
----
-### Challenge Task 1
-
-Mobile class is having few attributes like (`brandName`, `cost`, `screenSize`, `batteryLife` etc.) You have
-to create `getter`/`setter` for all the attributes.
-
-Override `toString()` method in the `Mobile` class.
-
-Inside the `MobileStore` class:
-1. Create a list of type `Mobile`. 
-2. Read the `mobile.csv` file line by line and store the data in the respective attribute of the `Mobile` class by calling the `setter` method, and return the list of type Mobile. Write the logic in the given method below:
-
-```java
-public List<Mobile> readMobileData(String fileName)
-```
+- A program to learn Lists, Comparators, File Reading and Writing using BufferedReader and BufferedWriter.
+- This program displays a nicely formatted menu for the action one can do in the Mobile Store like - 
+  - Display all the Available Mobiles in the shop
+  - Add Mobile to the shop 
+  - Find a specific brand of mobile 
+  - Display mobiles with Price low to high
+- The code automatically reads the data in the file [mobile.csv](src/main/resources/mobile.csv) as soon as the program 
+is run, and automatically writes the added mobile to the file as soon as a mobile is added
+- The class `Mobile.java` contains the fields for the Mobile, the class `MobileStore.java` creates a list of Mobile type for 
+the store, containing all the necessary methods for performing the tasks.
+- The class `MobileStoreImpl.java` contains the Main Method and calls all the other methods to perform the tasks based on 
+user choice.
 
 ---
-### Challenge Task 2
 
-1. Given a brand name as input, return the list of all mobiles of that brand. Write the logic in the method given below.
-```java
-public List<Mobile> findPhoneByBrand (String brandName)
-```
-2. Iterate through the list of mobile and return the phone that costs more than $500. Write the logic in the method given below and return the list.
-```java
-public List<Mobile> findPhoneCostMoreThan$500()
-```
-3. Iterate through the list of mobile and return the phone having pixel more than 12MP. Write the logic in the method given below and return the list.
-```java
-public List<Mobile> findPhonePixelMoreThan12MP()
-```
-Note - Only once mobile.csv file should be read and store the value in list
+### Note-
+This project is currently under development. Some parts of the program might appear to be missing or incomplete, and 
+some parts of the program might not work as expected.
