@@ -15,6 +15,17 @@ public class Mobile {
     private int batteryLife;
     private int megaPixels;
 
+    public Mobile(String brandName, double cost, double screenSize, int batteryLife, int megaPixels) {
+        this.brandName = brandName;
+        this.cost = cost;
+        this.screenSize = screenSize;
+        this.batteryLife = batteryLife;
+        this.megaPixels = megaPixels;
+    }
+
+    public Mobile() {
+    }
+
     public String getBrandName() {
         return brandName;
     }
@@ -55,27 +66,9 @@ public class Mobile {
         this.modelNumber = modelNumber;
     }
 
-    public Mobile(String brandName, double cost, double screenSize, int batteryLife, int megaPixels) {
-        this.brandName = brandName;
-        this.cost = cost;
-        this.screenSize = screenSize;
-        this.batteryLife = batteryLife;
-        this.megaPixels = megaPixels;
-    }
-
-    public Mobile() {
-    }
-
     @Override
     public String toString() {
-        return "Mobile{" +
-                "brandName='" + brandName + '\'' +
-                ", modelNumber='" + modelNumber + '\'' +
-                ", cost=" + cost +
-                ", screenSize=" + screenSize +
-                ", batteryLife=" + batteryLife +
-                ", megaPixels=" + megaPixels +
-                '}';
+        return "Mobile{" + "brandName='" + brandName + '\'' + ", modelNumber='" + modelNumber + '\'' + ", cost=" + cost + ", screenSize=" + screenSize + ", batteryLife=" + batteryLife + ", megaPixels=" + megaPixels + '}';
     }
 
     @Override
