@@ -68,10 +68,11 @@ public class MobileStore {
                 String[] data = line.split(",");
                 Mobile tempMobile = new Mobile();
                 tempMobile.setBrandName(data[0].trim());
-                tempMobile.setCost(Double.parseDouble(data[1]));
-                tempMobile.setScreenSize(Double.parseDouble(data[2]));
-                tempMobile.setBatteryLife(Integer.parseInt(data[3]));
-                tempMobile.setMegaPixels(Integer.parseInt(data[4]));
+                tempMobile.setModelNumber(data[1].trim());
+                tempMobile.setCost(Double.parseDouble(data[2]));
+                tempMobile.setScreenSize(Double.parseDouble(data[3]));
+                tempMobile.setBatteryLife(Integer.parseInt(data[4]));
+                tempMobile.setMegaPixels(Integer.parseInt(data[5]));
                 mobileList.add(tempMobile);
             }
         } catch (IOException exception) {
