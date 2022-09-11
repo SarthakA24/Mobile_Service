@@ -113,10 +113,11 @@ public class MobileStore {
         }
     }
 
-    public void displayMobile(List<Mobile> mobileList, String brandName) {
+    public void displayMobile(String brandName) {
+        List<Mobile> phoneByBrand = findPhoneByBrand(brandName);
         System.out.println("----------------------------");
         System.out.println("All Mobiles Available in the Store with the Brand Name " + brandName + " - ");
-        for (Mobile mobile : mobileList) {
+        for (Mobile mobile : phoneByBrand) {
             mobile.displayDetails();
         }
     }

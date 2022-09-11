@@ -28,8 +28,7 @@ public class MobileStoreImpl {
                 case 3:
                     System.out.println("Enter the brand name to search the mobile(s) - ");
                     String brandName = scanner.nextLine();
-                    List<Mobile> phoneByBrand = mobileStore.findPhoneByBrand(brandName);
-                    mobileStore.displayMobile(phoneByBrand,brandName);
+                    mobileStore.displayMobile(brandName);
                     break;
                 case 4:
                     mobileStore.sortBasedOnCost();
