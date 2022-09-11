@@ -84,7 +84,7 @@ public class MobileStore {
         // Store data from the mobileList in the file
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName,false))){
             for (Mobile mobile : mobileList) {
-                String data = "\n" + mobile.getBrandName() + "," + mobile.getCost() + "," + mobile.getScreenSize()
+                String data = "\n" + mobile.getBrandName() + "," + mobile.getBrandName() + "," + mobile.getCost() + "," + mobile.getScreenSize()
                         + "," + mobile.getBatteryLife() + "," + mobile.getMegaPixels();
                 bufferedWriter.write(data);
             }
@@ -113,6 +113,7 @@ public class MobileStore {
         for (Mobile mobile : mobileList) {
             if (mobile.getBrandName().equalsIgnoreCase(brandName) && mobile.getModelNumber().equalsIgnoreCase(modelNumberToRemove)) {
                 mobileList.remove(mobile);
+                break;
             }
         }
         writeMobileData();
