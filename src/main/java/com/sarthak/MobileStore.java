@@ -98,7 +98,7 @@ public class MobileStore {
         List<Mobile> phoneByBrand = new ArrayList<>();
         while (listIterator.hasNext()) {
             Mobile currentMobile = listIterator.next();
-            if (currentMobile.getBrandName().equals(brandName)) {
+            if (currentMobile.getBrandName().equalsIgnoreCase(brandName)) {
                 phoneByBrand.add(currentMobile);
             }
         }
