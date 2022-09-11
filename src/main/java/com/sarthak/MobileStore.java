@@ -63,7 +63,7 @@ public class MobileStore {
     public void readMobileData() {
         // Read the data from the file and store it in the List mobileList
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
-            String line;
+            String line = bufferedReader.readLine();
             while ((line = bufferedReader.readLine()) != null) {
                 String[] data = line.split(",");
                 Mobile tempMobile = new Mobile();
@@ -84,7 +84,7 @@ public class MobileStore {
         // Store data from the mobileList in the file
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName,false))){
             for (Mobile mobile : mobileList) {
-                String data = "\n" + mobile.getBrandName() + "," + mobile.getBrandName() + "," + mobile.getCost() + "," + mobile.getScreenSize()
+                String data = "\n" + mobile.getBrandName() + "," + mobile.getModelNumber() + "," + mobile.getCost() + "," + mobile.getScreenSize()
                         + "," + mobile.getBatteryLife() + "," + mobile.getMegaPixels();
                 bufferedWriter.write(data);
             }
