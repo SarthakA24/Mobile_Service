@@ -116,6 +116,7 @@ public class MobileStore {
                 break;
             }
         }
+        System.out.println(brandName + " " + modelNumberToRemove + " has been removed from the Store!!");
         writeMobileData();
     }
 
