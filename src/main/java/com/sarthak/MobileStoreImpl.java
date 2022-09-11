@@ -40,7 +40,7 @@ public class MobileStoreImpl {
                         mobileStore.displayMobile();
                         break;
                     case 6:
-                        break;
+                        System.exit(0);
                     default:
                         System.err.println("Invalid Input!! Please try again");
                 }
