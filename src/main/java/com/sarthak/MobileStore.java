@@ -148,9 +148,10 @@ public class MobileStore {
         System.out.println("Please select the options from below - ");
         System.out.println("1. Display all the Available Mobiles in the shop");
         System.out.println("2. Add Mobile to the shop");
-        System.out.println("3. Find a specific brand of mobile - ");
-        System.out.println("4. Display mobiles with Price low to high - ");
-        System.out.println("5. Exit the shop - ");
+        System.out.println("3. Remove Mobile from the shop");
+        System.out.println("4. Find a specific brand of mobile - ");
+        System.out.println("5. Display mobiles with Price low to high - ");
+        System.out.println("6. Exit the shop - ");
         System.out.println("Please enter your choice (1-5) - ");
     }
 }
