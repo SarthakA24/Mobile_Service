@@ -102,6 +102,7 @@ public class Mobile {
     public void displayDetails() {
         System.out.println("----------------------------");
         System.out.println("Mobile Brand Name - " + this.brandName);
+        System.out.println("Model Number = " + this.modelNumber);
         System.out.println("Mobile's Cost - Rs. " + this.cost);
         System.out.println("Mobile's Screen Size - " + this.screenSize + " inches");
         System.out.println("Mobile's Battery Life - " + this.batteryLife + " mAh");
