@@ -26,15 +26,19 @@ public class MobileStoreImpl {
                     System.out.println("Mobile has been added to the List!!");
                     break;
                 case 3:
+                    System.out.println("Enter the Brand Name - ");
+                    String mobileToRemove = scanner.nextLine();
+                    mobileStore.removePhoneFromList(mobileToRemove);
+                case 4:
                     System.out.println("Enter the brand name to search the mobile(s) - ");
                     String brandName = scanner.nextLine();
                     mobileStore.displayMobile(brandName);
                     break;
-                case 4:
+                case 5:
                     mobileStore.sortBasedOnCost();
                     mobileStore.displayMobile();
                     break;
-                case 5:
+                case 6:
                     break;
                 default:
                     System.err.println("Invalid Input!! Please try again");
