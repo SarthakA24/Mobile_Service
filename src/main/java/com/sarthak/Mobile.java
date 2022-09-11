@@ -15,8 +15,9 @@ public class Mobile {
     private int batteryLife;
     private int megaPixels;
 
-    public Mobile(String brandName, double cost, double screenSize, int batteryLife, int megaPixels) {
+    public Mobile(String brandName, String modelNumber, double cost, double screenSize, int batteryLife, int megaPixels) {
         this.brandName = brandName;
+        this.modelNumber = modelNumber;
         this.cost = cost;
         this.screenSize = screenSize;
         this.batteryLife = batteryLife;

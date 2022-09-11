@@ -42,6 +42,8 @@ public class MobileStore {
         do {
             System.out.println("Enter the Brand Name - ");
             String brandName = scanner.nextLine();
+            System.out.println("Enter the Model Number for the Phone");
+            String modelNumber = scanner.nextLine();
             System.out.println("Enter the cost for the mobile - ");
             double cost = Double.parseDouble(scanner.nextLine());
             System.out.println("Enter the Screen Size - ");
@@ -50,7 +52,7 @@ public class MobileStore {
             int batteryLife = Integer.parseInt(scanner.nextLine());
             System.out.println("Enter the Megapixels for the Camera - ");
             int megaPixels = Integer.parseInt(scanner.nextLine());
-            Mobile mobile = new Mobile(brandName,cost,screenSize,batteryLife,megaPixels);
+            Mobile mobile = new Mobile(brandName,modelNumber,cost,screenSize,batteryLife,megaPixels);
             mobileList.add(mobile);
             System.out.println("Do you want to add more mobiles? (y/n) - ");
             addMore = scanner.nextLine();
