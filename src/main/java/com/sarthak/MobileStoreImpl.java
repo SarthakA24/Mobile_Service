@@ -28,6 +28,7 @@ public class MobileStoreImpl {
                     System.out.println("Enter the Brand Name - ");
                     String mobileToRemove = scanner.nextLine();
                     mobileStore.removePhoneFromList(mobileToRemove);
+                    break;
                 case 4:
                     System.out.println("Enter the brand name to search the mobile(s) - ");
                     String brandName = scanner.nextLine();
