@@ -63,7 +63,7 @@ public class MobileStore {
     public void readMobileData() {
         // Read the data from the file and store it in the List mobileList
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
-            String line = bufferedReader.readLine();
+            String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] data = line.split(",");
                 Mobile tempMobile = new Mobile();
