@@ -9,6 +9,7 @@ import java.util.Objects;
 
 public class Mobile {
     private String brandName;
+    private String modelNumber;
     private double cost;
     private double screenSize;
     private int batteryLife;
@@ -46,6 +47,14 @@ public class Mobile {
         this.batteryLife = batteryLife;
     }
 
+    public String getModelNumber() {
+        return modelNumber;
+    }
+
+    public void setModelNumber(String modelNumber) {
+        this.modelNumber = modelNumber;
+    }
+
     public Mobile(String brandName, double cost, double screenSize, int batteryLife, int megaPixels) {
         this.brandName = brandName;
         this.cost = cost;
@@ -61,6 +70,7 @@ public class Mobile {
     public String toString() {
         return "Mobile{" +
                 "brandName='" + brandName + '\'' +
+                ", modelNumber='" + modelNumber + '\'' +
                 ", cost=" + cost +
                 ", screenSize=" + screenSize +
                 ", batteryLife=" + batteryLife +
@@ -73,12 +83,12 @@ public class Mobile {
         if (this == o) return true;
         if (!(o instanceof Mobile)) return false;
         Mobile mobile = (Mobile) o;
-        return Double.compare(mobile.getCost(), getCost()) == 0 && Double.compare(mobile.getScreenSize(), getScreenSize()) == 0 && getBatteryLife() == mobile.getBatteryLife() && getMegaPixels() == mobile.getMegaPixels() && getBrandName().equals(mobile.getBrandName());
+        return Double.compare(mobile.getCost(), getCost()) == 0 && Double.compare(mobile.getScreenSize(), getScreenSize()) == 0 && getBatteryLife() == mobile.getBatteryLife() && getMegaPixels() == mobile.getMegaPixels() && Objects.equals(getBrandName(), mobile.getBrandName()) && Objects.equals(getModelNumber(), mobile.getModelNumber());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getBrandName(), getCost(), getScreenSize(), getBatteryLife(), getMegaPixels());
+        return Objects.hash(getBrandName(), getModelNumber(), getCost(), getScreenSize(), getBatteryLife(), getMegaPixels());
     }
 
     public int getMegaPixels() {
