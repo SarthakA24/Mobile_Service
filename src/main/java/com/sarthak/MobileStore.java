@@ -125,6 +125,11 @@ public class MobileStore {
         System.out.println("All Mobiles Available in the Store");
         for (Mobile mobile : mobileList) {
             mobile.displayDetails();
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
