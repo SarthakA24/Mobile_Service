@@ -105,6 +105,19 @@ public class MobileStore {
         return phoneByBrand;
     }
 
+    public void removePhoneFromList(String brandName) {
+        Scanner scanner = new Scanner(System.in);
+        displayMobile(brandName);
+        System.out.println("Enter the Model Number for the Mobile that you want to delete - ");
+        String modelNumberToRemove = scanner.nextLine();
+        for (Mobile mobile : mobileList) {
+            if (mobile.getBrandName().equalsIgnoreCase(brandName) && mobile.getModelNumber().equalsIgnoreCase(modelNumberToRemove)) {
+                mobileList.remove(mobile);
+            }
+        }
+        writeMobileData();
+    }
+
     public void displayMobile() {
         System.out.println("----------------------------");
         System.out.println("All Mobiles Available in the Store");
