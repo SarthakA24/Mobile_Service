@@ -110,12 +110,9 @@ public class MobileStore {
         displayMobile(brandName);
         System.out.println("Enter the Model Number for the Mobile that you want to delete - ");
         String modelNumberToRemove = scanner.nextLine();
-        for (Mobile mobile : mobileList) {
-            if (mobile.getBrandName().equalsIgnoreCase(brandName) && mobile.getModelNumber().equalsIgnoreCase(modelNumberToRemove)) {
-                mobileList.remove(mobile);
-                break;
-            }
-        }
+        mobileList.stream()
+                .filter(mobile -> mobile.getBrandName().equalsIgnoreCase(brandName) && mobile.getModelNumber().equalsIgnoreCase(modelNumberToRemove))
+                .findFirst().ifPresent(mobileList::remove);
         System.out.println(brandName + " " + modelNumberToRemove + " has been removed from the Store!!");
         writeMobileData();
     }
