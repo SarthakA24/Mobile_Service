@@ -120,23 +120,21 @@ public class MobileStore {
     public void displayMobile() {
         System.out.println("----------------------------");
         System.out.println("All Mobiles Available in the Store");
-        for (Mobile mobile : mobileList) {
+        mobileList.forEach(mobile -> {
             mobile.displayDetails();
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-        }
+        });
     }
 
     public void displayMobile(String brandName) {
         List<Mobile> phoneByBrand = findPhoneByBrand(brandName);
         System.out.println("----------------------------");
         System.out.println("All Mobiles Available in the Store with the Brand Name " + brandName + " - ");
-        for (Mobile mobile : phoneByBrand) {
-            mobile.displayDetails();
-        }
+        phoneByBrand.forEach(Mobile::displayDetails);
     }
 
     public void sortBasedOnCost() {
