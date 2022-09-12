@@ -63,9 +63,8 @@ public class MobileStore {
     public void readMobileData() {
         // Read the data from the file and store it in the List mobileList
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
-            String line = bufferedReader.readLine();
-            while ((line = bufferedReader.readLine()) != null) {
-                String[] data = line.split(",");
+            String read = bufferedReader.readLine();
+            bufferedReader.lines().map(line -> line.split(",")).forEach(data -> {
                 Mobile tempMobile = new Mobile();
                 tempMobile.setBrandName(data[0].trim());
                 tempMobile.setModelNumber(data[1].trim());
@@ -74,7 +73,7 @@ public class MobileStore {
                 tempMobile.setBatteryLife(Integer.parseInt(data[4]));
                 tempMobile.setMegaPixels(Integer.parseInt(data[5]));
                 mobileList.add(tempMobile);
-            }
+            });
         } catch (IOException exception) {
             System.err.println(exception.getMessage());
         }
