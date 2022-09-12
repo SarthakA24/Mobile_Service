@@ -143,11 +143,11 @@ public class MobileStore {
     }
 
     public void sortBasedOnCost() {
-        mobileList.sort(new MobileComparatorBasedOnCost());
+        mobileList.sort(Comparator.comparingDouble(Mobile::getCost));
     }
 
     public void sortAlphabetically() {
-        mobileList.sort(new MobileComparatorAlphabetically());
+        mobileList.sort((o1, o2) -> String.CASE_INSENSITIVE_ORDER.compare(o1.getBrandName(),o2.getBrandName()));
     }
 
     public void displayMenu(){
