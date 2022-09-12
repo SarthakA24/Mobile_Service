@@ -93,14 +93,10 @@ public class MobileStore {
     }
 
     public List<Mobile> findPhoneByBrand(String brandName) {
-        ListIterator<Mobile> listIterator = mobileList.listIterator();
         List<Mobile> phoneByBrand = new ArrayList<>();
-        while (listIterator.hasNext()) {
-            Mobile currentMobile = listIterator.next();
-            if (currentMobile.getBrandName().equalsIgnoreCase(brandName)) {
-                phoneByBrand.add(currentMobile);
-            }
-        }
+        mobileList.stream()
+                .filter(mobile -> mobile.getBrandName().equalsIgnoreCase(brandName))
+                .forEach(phoneByBrand::add);
         return phoneByBrand;
     }
 
